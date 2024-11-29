@@ -1,4 +1,5 @@
-import './css/dailyWeatherCard.css';
+import React from 'react';
+import './dailyWeatherCard.css';
 
 const DailyWeatherCard = ({ dayOfWeek, condition, tempHigh, tempLow }) => {
   return (

@@ -1,4 +1,5 @@
-import './css/hourlyWeatherCard.css';
+import React from 'react';
+import './hourlyWeatherCard.css';
 
 const HourlyWeatherCard = ({ hour, condition, temperature }) => {
   return (
