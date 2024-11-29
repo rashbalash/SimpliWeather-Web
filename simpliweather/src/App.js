@@ -10,9 +10,9 @@ function App() {
   return (
     <div className="App">
       <header className="main-header">
-        <p>SimpliWeather</p>
+        <p className="title">SimpliWeather</p>
         <LocationNameTag location="annapolis, md" />
-        <break />
+        <div className="title-break"></div>
         <MinuteByMinuteCard minutelyData={mockData} />
         <break />
         <HourlyWeatherCard condition={"partly cloudy"} hour={"9 pm"} temperature={"52"} />

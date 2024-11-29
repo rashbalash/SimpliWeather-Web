@@ -9,6 +9,9 @@ const MinuteByMinuteCard = ({ minutelyData }) => {
         const minutesFromNow = index; // Each data point represents 1 minute
         return `+${minutesFromNow} min`;
     }
+    if (index === 59) {
+        return "+60 min";
+    }
   };
 
   return (
