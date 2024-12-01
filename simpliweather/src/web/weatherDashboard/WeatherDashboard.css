@@ -1,0 +1,22 @@
+.weather-dashboard-wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.current-weather-and-details-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-width: 50%;
+}
+
+.weather-dashboard-minute-hourly-daily {
+    display: flex;
+    flex-direction: column;
+    min-width: 50%;
+}
+
+.current-weather-spacer {
+    height: 3rem;
+    width: 100%;
+}

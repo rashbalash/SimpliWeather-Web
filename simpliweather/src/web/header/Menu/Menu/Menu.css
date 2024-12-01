@@ -1,0 +1,40 @@
+.menu-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 48px;
+    height: 48px;
+    background: #1e1e1e;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    z-index: 1; /* Ensure it's below the MenuButton */
+}
+
+.menu-container.menu-open {
+    width: 20%;
+    height: 80%;
+    border-radius: 25px;
+    z-index: 5; /* Higher when open to cover content but not the MenuButton */
+}
+
+.menu-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+    gap: 10px;
+    padding: 10px;
+}
+
+.menu-item {
+    background: #356bb7;
+    border-radius: 12px;
+    padding: 10px;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+  
