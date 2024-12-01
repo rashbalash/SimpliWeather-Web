@@ -1,14 +1,11 @@
-.menu-button {
-    position: absolute;
-    top: 20px;
-    left: 20px;
+.location-menu-button {
     background: #1e1e1e;
-    z-index: 20; /* Keep above menu container */
+    z-index: 10; /* Keep above menu container */
     border: none;
     color: white;
     font-size: 24px;
-    width: 48px;
-    height: 48px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     cursor: pointer;
     display: flex;
@@ -17,22 +14,22 @@
     transition: transform 0.3s ease;
 }
 
-.menu-button:hover {
+.location-menu-button:hover {
     transform: scale(1.1);
 }
 
-.menu-button.open {
+.location-menu-button.open {
     transform: rotate(90deg);
     border-color: #fff;
     border-style: solid;
     border-width: .1rem;
 }
 
-.menu-button-icon {
+.location-menu-button-icon {
     font-size: 28px;
     line-height: 0;
 }
 
-.menu-button-icon.close {
+.location-menu-button-icon.close {
     font-size: 36px;
 } 

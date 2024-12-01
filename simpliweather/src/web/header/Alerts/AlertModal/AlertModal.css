@@ -1,0 +1,35 @@
+.alert-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+}
+
+.alert-modal-content {
+    color: white;
+    background-color:#234C79;
+    padding: 20px;
+    border-radius: 25px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.alert-modal-content h2 {
+    margin-bottom: 10px;
+}
+
+.alert-modal-content button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+}

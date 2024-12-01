@@ -1,9 +1,9 @@
-.menu-container {
+.location-menu-container {
     position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 48px;
-    height: 48px;
+    top: 1rem;
+    left: 1rem;
+    width: 0;
+    height: 0;
     background: #1e1e1e;
     border-radius: 50%;
     overflow: hidden;
@@ -11,14 +11,14 @@
     z-index: 1; /* Ensure it's below the MenuButton */
 }
 
-.menu-container.menu-open {
+.location-menu-container.location-menu-open {
     width: 20%;
     height: 80%;
     border-radius: 25px;
     z-index: 5; /* Higher when open to cover content but not the MenuButton */
 }
 
-.menu-content {
+.location-menu-content {
     display: flex;
     flex-direction: column;
     margin-top: 80px;
@@ -26,7 +26,7 @@
     padding: 10px;
 }
 
-.menu-item {
+.location-menu-item {
     background: #356bb7;
     border-radius: 12px;
     padding: 10px;

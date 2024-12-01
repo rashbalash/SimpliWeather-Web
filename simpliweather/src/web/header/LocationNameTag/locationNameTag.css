@@ -1,9 +1,7 @@
 /* Styling for LocationTag */
 .location-name-tag {
-    display: inline-block;
-    background-color: #234C79; /* Dark blue */
+    background-color: #234C79;
     color: white;
-    font-family: 'Poppins', sans-serif;
     font-size: .8rem;
     text-transform: lowercase;
     padding: .2rem 1.5rem;

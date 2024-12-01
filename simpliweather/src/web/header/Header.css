@@ -3,3 +3,21 @@
     color: white;
     margin: .5rem;
 }
+
+.header-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header-title-and-location-name {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-and-alert-buttons {
+    margin: 1rem 0 0 1rem;
+    gap: .8rem;
+    display: flex;
+    flex-direction: column;
+}

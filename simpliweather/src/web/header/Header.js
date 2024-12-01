@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import './Header.css';
 
 import LocationNameTag from './LocationNameTag/LocationNameTag';
-import Menu from './Menu/Menu/Menu';
-import MenuButton from './Menu/MenuButton/MenuButton';
+import LocationMenuModal from './LocationMenu/LocationMenuModal/LocationMenuModal';
+import LocationMenuButton from './LocationMenu/LocationMenuButton/LocationMenuButton';
+import AlertButton from './Alerts/AlertButton/AlertButton';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,14 +14,19 @@ const Header = () => {
     };
 
     return (
-        <div>
-            <div>
-                <MenuButton isOpen={isMenuOpen} toggleMenu={toggleMenu} />
-                <Menu isOpen={isMenuOpen} />
-            </div>
+        <div className="header-wrapper">
+            <div className="menu-and-alert-buttons">
+                <LocationMenuButton isOpen={isMenuOpen} toggleMenu={toggleMenu} />
+                <LocationMenuModal isOpen={isMenuOpen} />
 
-            <p className="title">SimpliWeather</p>
-            <LocationNameTag location="annapolis, md" />
+                <AlertButton />
+            </div>
+            <div className="header-title-and-location-name">
+                <p className="title">SimpliWeather</p>
+                <LocationNameTag location="annapolis, md" />
+            </div>
+            <div className="settings-and-profile">
+            </div>
         </div>
     );
 };

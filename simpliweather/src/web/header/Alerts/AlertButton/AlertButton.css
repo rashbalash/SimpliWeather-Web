@@ -1,0 +1,36 @@
+.alert-button-wrapper {
+  
+}
+
+.alert-button {
+    background-color: #ccc;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 50%;
+}
+
+.alert-button.alert-active {
+    background-color: red;
+    color: white;
+}
+
+.alert-button:hover {
+    background-color: #aaa;
+}
+
+.tooltip {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 5px;
+    font-size: 14px;
+    top: 40px;
+    left: 0;
+    z-index: 15;
+}
+
+.notification-symbol {
+    width: 27px;
+    height: 30px;
+}
