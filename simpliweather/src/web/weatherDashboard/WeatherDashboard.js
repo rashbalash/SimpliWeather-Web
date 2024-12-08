@@ -33,7 +33,7 @@ const WeatherDashboard = () => {
 
     const handleSearchLocation = (query) => {
         dispatch(addLocation(query));
-        setIsLocationSearchModalOpen(false); // Close modal after search
+        setIsLocationSearchModalOpen(false);
     };
 
     const handleUseCurrentLocation = () => {
@@ -56,6 +56,7 @@ const WeatherDashboard = () => {
                     closeModal={() => setIsLocationSearchModalOpen(false)}
                     searchLocation={handleSearchLocation}
                     useCurrentLocation={handleUseCurrentLocation}
+                    hasLocations={!locations.length}
                 />
             }
 

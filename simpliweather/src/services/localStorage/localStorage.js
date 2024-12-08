@@ -1,10 +1,10 @@
-const currentLocalStorageVersion = 1;
+// const currentLocalStorageVersion = 1;
 
 export const saveStateToLocalStorage = (state) => {
     try {
         const stateToSave = {
             ...state,
-            version: currentLocalStorageVersion,
+            // version: currentLocalStorageVersion,
         };
 
         const serializedState = JSON.stringify(stateToSave);

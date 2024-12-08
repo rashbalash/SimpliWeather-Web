@@ -39,13 +39,12 @@
 }
 
 .location-search-wrapper input {
-    flex-grow: 1;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 25px;
     font-size: 1rem;
-    width: 70%;
     margin-right: .5rem;
+    min-width: 17rem;
 }
 
 .location-search-wrapper .search-button {
@@ -74,4 +73,31 @@
 
 .current-location-button:hover {
     background-color: var(--sw-main-accent-fill-color-darkened);
+}
+
+.autocomplete-dropdown {
+    position: absolute;
+    background-color: var(--sw-modal-background-color);
+    border-radius: 5px;
+    z-index: 10;
+    max-height: 200px;
+    overflow-y: auto;
+    cursor: pointer;
+    border: 0.1rem solid var(--sw-border-color);
+    left: 0;
+    right: 0;
+    text-align: left; 
+}
+
+.suggestion-item {
+    margin: 0.2rem;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+.suggestion-item--active {
+    background-color: var(--sw-secondary-fill-color);
+    color: var(--sw-secondary-text-color);
+    margin: 0.2rem;
 }
