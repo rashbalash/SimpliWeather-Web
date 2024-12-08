@@ -1,0 +1,61 @@
+.settings-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+    animation: fadeIn 0.5s forwards;
+}
+
+.settings-modal-content {
+    background-color: var(--sw-modal-background-color);
+    color: var(--sw-text-color);
+    padding: 20px;
+    border-radius: 25px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+
+    .settings-close-button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: var(--sw-main-accent-fill-color);
+        color: var(--sw-text-color);
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .settings-close-button:hover {
+        background-color: var(--sw-main-accent-fill-color-darkened);
+    }
+}
+
+.settings-option {
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.setting-modal-toggles {
+    display: flex;
+    flex-direction: column;
+}
+
+.settings-name-and-description {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.toggle-description {
+    font-size: 12px;
+    color: var(--sw-secondary-text-color);
+}

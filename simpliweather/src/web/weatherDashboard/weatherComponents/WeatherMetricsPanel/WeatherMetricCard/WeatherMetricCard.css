@@ -5,11 +5,18 @@
     justify-content: center;
     width: 100px;
     height: 100px;
-    background-color: #243447; /* Card background color */
     border-radius: 25px;
     padding: 10px;
     text-align: center;
     color: #ffffff;
+}
+
+.weather-metric-card.filled {
+    background-color: var(--sw-secondary-fill-color);
+}
+
+.weather-metric-card.unfilled {
+    border: .1rem solid var(--sw-border-color);
 }
 
 .weather-metric-icon {
@@ -20,9 +27,10 @@
 .weather-metric-value {
     font-size: 20px;
     font-weight: bold;
+    color: var(--sw-text-color);
 }
 
 .weather-metric-name {
-    color: #b0b0b0; /* Lighter text color for the name */
+    color: var(--sw-secondary-text-color); /* Lighter text color for the name */
 }
   

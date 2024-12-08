@@ -5,7 +5,7 @@ import AlertModal from '../AlertModal/AlertModal';
 import notificationSymbol from "./notificationSymbol.png"; // Example icon
 
 const AlertButton = () => {
-    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isAlertModalOpen, setIsAlertModalOpen] = useState(false);
     const [showTooltip, setShowTooltip] = useState(false);
 
     // Use mockAlerts data instead of fetching from API
@@ -38,7 +38,7 @@ const AlertButton = () => {
         <div className='alert-button-wrapper'>
             <button
                 className={`alert-button ${alerts.length > 0 ? 'alert-active' : ''}`}
-                onClick={() => setIsModalOpen(true)}
+                onClick={() => setIsAlertModalOpen(true)}
                 onMouseEnter={() => toggleTooltip(true)}
                 onMouseLeave={() => toggleTooltip(false)}
             >
@@ -51,12 +51,12 @@ const AlertButton = () => {
                 </div>
             )}
 
-            {isModalOpen && (
-                <AlertModal 
-                    alerts={alerts} 
-                    closeModal={() => setIsModalOpen(false)} 
-                />
-            )}
+            
+            {isAlertModalOpen && (<AlertModal 
+                alerts={alerts} 
+                isOpen={isAlertModalOpen}
+                closeModal={() => setIsAlertModalOpen(false)} 
+            />)}
         </div>
     );
 };

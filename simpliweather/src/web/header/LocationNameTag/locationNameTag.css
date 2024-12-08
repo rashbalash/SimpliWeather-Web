@@ -1,11 +1,17 @@
 /* Styling for LocationTag */
 .location-name-tag {
-    background-color: #234C79;
-    color: white;
-    font-size: .8rem;
-    text-transform: lowercase;
-    padding: .2rem 1.5rem;
-    border-radius: 25px; /* Makes it pill-shaped */
-    text-align: center;
-  }
-  
+  color: var(--sw-text-color);
+  font-size: .8rem;
+  text-transform: lowercase;
+  padding: .2rem 1.5rem;
+  border-radius: 25px; /* Makes it pill-shaped */
+  text-align: center;
+}
+
+.location-name-tag.filled {
+  background-color: var(--sw-main-fill-color);
+}
+
+.location-name-tag.unfilled {
+  border: .1rem solid var(--sw-border-color);
+} 

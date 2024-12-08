@@ -5,7 +5,7 @@
     justify-content: space-between;
     max-width: 20rem;
     width: 100%;
-    color: white;
+    color: var(--sw-text-color);
 }
 
 .current-weather-icon {
@@ -48,11 +48,11 @@
 .current-weather-high-low {
     display: flex;
     flex-direction: column;
-    color: #cccccc;
+    color: var(--sw-secondary-text-color);
 }
 
 .current-weather-real-feel {
-    color: #aaaaaa;
+    color: var(--sw-secondary-text-color);
 }
 
 .current-weather-condition {
@@ -60,13 +60,18 @@
     font-weight: 500;
     text-transform: capitalize;
     margin-top: 10px;
-    color: white;
+    color: var(--sw-text-color);
 }
 
 .current-weather-details {
-    border-color: #fff;
-    border-style: solid;
-    border-width: .1rem;
     border-radius: 25px;
     padding: 1rem;
+}
+
+.current-weather-details.filled {
+    background-color: var(--sw-main-fill-color);
+}
+
+.current-weather-details.unfilled {
+    border: .1rem solid var(--sw-border-color);
 }

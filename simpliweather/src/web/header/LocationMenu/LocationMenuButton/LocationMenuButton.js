@@ -1,11 +1,11 @@
 import React from 'react';
 import './LocationMenuButton.css';
 
-const LocationMenuButton = ({ isOpen, toggleMenu }) => {
+const LocationMenuButton = ({ isOpen, toggleLocationMenu }) => {
   return (
     <button
       className={`location-menu-button ${isOpen ? 'open' : ''}`}
-      onClick={toggleMenu}
+      onClick={toggleLocationMenu}
       aria-label="Toggle menu"
     >
       {isOpen ? (

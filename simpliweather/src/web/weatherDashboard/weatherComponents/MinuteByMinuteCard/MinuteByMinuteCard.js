@@ -1,7 +1,10 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import "./MinuteByMinuteCard.css";
 
 const MinuteByMinuteCard = ({ minutelyData }) => {
+  const isUiFilled = useSelector((state) => state.settings.isUiFilled);
+
   // Format time labels for the graph
   const formatTimeLabel = (timestamp, index) => {
     if (index === 0) return "Now";
@@ -15,7 +18,7 @@ const MinuteByMinuteCard = ({ minutelyData }) => {
   };
 
   return (
-    <div className="minute-card">
+    <div className={`minute-card ${isUiFilled ? 'filled' : 'unfilled'}`}>
       <h3>Rain in the Next Hour</h3>
       <div className="timeline">
         {minutelyData.map((minute, index) => (
@@ -24,7 +27,6 @@ const MinuteByMinuteCard = ({ minutelyData }) => {
               className="bar"
               style={{
                 height: `${minute.precipitation * 10}px`, // Scale the precipitation visually
-                backgroundColor: minute.precipitation > 0 ? "#fff" : "#ccc",
               }}
             ></div>
             <div className="time-label">{formatTimeLabel(minute.dt, index)}</div>

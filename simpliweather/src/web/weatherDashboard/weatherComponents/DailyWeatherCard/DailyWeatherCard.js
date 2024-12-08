@@ -1,9 +1,13 @@
 import React from 'react';
-import './dailyWeatherCard.css';
+import { useSelector } from 'react-redux';
+
+import './DailyWeatherCard.css';
 
 const DailyWeatherCard = ({ dayOfWeek, condition, tempHigh, tempLow }) => {
+  const isUiFilled = useSelector((state) => state.settings.isUiFilled)
+
   return (
-    <div className="daily-weather-card">
+    <div className={`daily-weather-card ${ isUiFilled ? 'filled': 'unfilled' }`}>
       <p className="daily-weather-day">{dayOfWeek}</p>
       <div className="daily-weather-icon">
         {/* Replace the <div> below with an actual weather icon SVG or image */}

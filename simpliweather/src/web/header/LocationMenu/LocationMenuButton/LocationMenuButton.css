@@ -1,8 +1,8 @@
 .location-menu-button {
-    background: #1e1e1e;
+    background: var(--sw-modal-button-color);
     z-index: 10; /* Keep above menu container */
     border: none;
-    color: white;
+    color: var(--sw-modal-button-accent-color);
     font-size: 24px;
     width: 40px;
     height: 40px;
@@ -27,7 +27,6 @@
 
 .location-menu-button-icon {
     font-size: 28px;
-    line-height: 0;
 }
 
 .location-menu-button-icon.close {

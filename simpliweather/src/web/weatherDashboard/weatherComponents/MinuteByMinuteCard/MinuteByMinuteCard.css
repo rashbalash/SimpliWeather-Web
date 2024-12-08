@@ -1,13 +1,17 @@
 .minute-card {
-    background-color: #234C79;
-    /* border-color: #fff;
-    border-style: solid;
-    border-width: .1rem; */
     border-radius: 25px;
     padding: 1rem 1.5rem 3rem 1.5rem;
-    color: #fff;
+    color: var(--sw-text-color);
     max-width: 400px;
     margin-bottom: .8rem;
+}
+
+.minute-card.filled {
+    background-color: var(--sw-main-fill-color);
+}
+
+.minute-card.unfilled {
+    border: .1rem solid var(--sw-border-color)
 }
 
 .minute-card h3 {
@@ -28,14 +32,15 @@
     width: 100%;
     transition: height 0.3s ease;
     border-radius: 25px;
-    width: .2rem
+    width: .2rem;
+    background-color: var(--sw-text-color);
 }
 
 .time-label {
     position: absolute;
     bottom: -45px;
     font-size: 0.8rem;
-    color: #ccc;
+    color: var(--sw-text-color);
     text-align: center;
 }
 

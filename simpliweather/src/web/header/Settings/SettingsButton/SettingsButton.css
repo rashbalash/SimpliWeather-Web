@@ -1,0 +1,24 @@
+.settings-button-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.settings-button {
+    z-index: 10; /* Keep above menu container */
+    border: none;
+    color: var(--sw-modal-button-color);
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    transition: background-color 0.3s ease;
+}
+
+.settings-button:hover {
+    background-color: #ffffff33;
+}

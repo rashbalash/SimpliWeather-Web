@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import './WeatherDashboard.css'
 
+import { useSelector, useDispatch } from "react-redux";
+import {
+    addLocation
+} from '../features/locations/locationsSlice';
+
+import LocationSearchModal from '../weatherDashboard/locationComponents/locationSearchModal/locationSearchModal';
 import { CurrentWeatherCard,
     HourlyWeatherCard, 
     DailyWeatherCard, 
@@ -21,8 +27,38 @@ const WeatherDashboard = () => {
         condition: 'partly cloudy',
     };
 
+    const dispatch = useDispatch();
+    const locations = useSelector((state) => state.locations.locations);
+    const [isLocationSearchModalOpen, setIsLocationSearchModalOpen] = useState(!locations.length);
+
+    const handleSearchLocation = (query) => {
+        dispatch(addLocation(query));
+        setIsLocationSearchModalOpen(false); // Close modal after search
+    };
+
+    const handleUseCurrentLocation = () => {
+        navigator.geolocation.getCurrentPosition(
+            (position) => {
+                console.log('Latitude:', position.coords.latitude);
+                console.log('Longitude:', position.coords.longitude);
+                setIsLocationSearchModalOpen(false); // Close modal after using location
+            },
+            (error) => {
+                console.error('Error getting location:', error);
+            }
+        );
+    };
+
     return (
         <div className="weather-dashboard-wrapper">
+            {isLocationSearchModalOpen && 
+                <LocationSearchModal
+                    closeModal={() => setIsLocationSearchModalOpen(false)}
+                    searchLocation={handleSearchLocation}
+                    useCurrentLocation={handleUseCurrentLocation}
+                />
+            }
+
             <div className="current-weather-and-details-wrapper">
                 <CurrentWeatherCard
                     temperature={mockWeatherData.temperature}
@@ -36,9 +72,7 @@ const WeatherDashboard = () => {
             </div>
             <div className="weather-dashboard-minute-hourly-daily">
                 <MinuteByMinuteCard minutelyData={mockData} />
-                <break />
                 <HourlyWeatherCard condition={"partly cloudy"} hour={"9 pm"} temperature={"52"} />
-                <break />
                 <DailyWeatherCard condition={"sunny"} dayOfWeek={"tue"} tempHigh={"50"} tempLow={"36"} />
             </div>
         </div>

@@ -5,8 +5,6 @@ import Header from './web/header/Header';
 import WeatherDashboard from './web/weatherDashboard/WeatherDashboard';
 
 function App() {
-  
-
   return (
     <div className="App">
       {/* Header */}
@@ -21,7 +19,7 @@ function App() {
       {/* Radar */}
 
       {/* Spacer */}
-      <div className="spacer"></div>
+      {/* <div className="spacer"></div> */}
 
       {/* Footer */}
     </div>

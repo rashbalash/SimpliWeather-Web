@@ -4,11 +4,12 @@
     left: 1rem;
     width: 0;
     height: 0;
-    background: #1e1e1e;
+    background: var(--sw-modal-background-color);
     border-radius: 50%;
     overflow: hidden;
     transition: all 0.4s ease;
     z-index: 1; /* Ensure it's below the MenuButton */
+    min-width: 20rem;
 }
 
 .location-menu-container.location-menu-open {

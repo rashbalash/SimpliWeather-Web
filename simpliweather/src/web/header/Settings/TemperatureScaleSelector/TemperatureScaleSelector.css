@@ -1,0 +1,26 @@
+.temperature-scale-selector {
+    display: flex;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.scale-button {
+    flex: 1;
+    padding: .5rem .8rem;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    background-color: var(--sw-text-color);
+    color: var(--sw-disabled-text-color);
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.scale-button.active {
+    background-color: var(--sw-secondary-accent-fill-color); /* Green background for active state */
+    color: var(--sw-text-color);
+}
+
+.scale-button:not(.active):hover {
+    background-color: var(--sw-modal-button-color); /* Light gray hover effect */
+}

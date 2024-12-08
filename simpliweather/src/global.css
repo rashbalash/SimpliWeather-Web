@@ -1,0 +1,69 @@
+/* global.css or variables.css */
+:root {
+  /* primary color variables */
+  --sw-main-fill-color: #234C79; /* Main background color for filled cards */
+  --sw-secondary-fill-color: #243447; /* Secondary background color or buttons */
+  --sw-main-accent-fill-color: #C53335;
+  --sw-main-accent-fill-color-darkened: #852325;
+  --sw-secondary-accent-fill-color: #3ca146;
+  --sw-background-color: #0B141E;
+  
+  /* Text Color */
+  --sw-text-color: #f5f5f5;
+  --sw-secondary-text-color: #b0b0b0;
+  --sw-disabled-text-color: #000;
+
+  /* Border Color */
+  --sw-border-color: #f5f5f5;
+
+  /* Modal Colors */
+  --sw-modal-button-color: #F5F5F5;
+  --sw-modal-button-color-on-hover: #cccccc;
+  --sw-modal-button-accent-color: #1E1E1E;
+  --sw-modal-background-color: #1E1E1E;
+
+
+  /* Define font sizes */
+  /* --font-small: 0.875rem;
+  --font-medium: 1rem;
+  --font-large: 1.25rem; */
+  
+  /* Define spacing */
+  /* --spacing-small: 0.5rem;
+  --spacing-medium: 1rem;
+  --spacing-large: 1.5rem; */
+}
+
+[data-theme="light"] {
+  /* primary color variables */
+  --sw-main-fill-color: #6482AD; /* Main background color for filled cards */
+  --sw-secondary-fill-color: #7FA1C3; /* Secondary background color or buttons */
+  --sw-main-accent-fill-color: #C53335;
+  --sw-secondary-accent-fill-color: #3ca146;
+  --sw-background-color: #F6F6F8;
+
+  /* Text Color */
+  --sw-text-color: #000;
+  --sw-secondary-text-color: #363062;
+  --sw-disabled-text-color: #FFF;
+
+  /* Border Color */
+  --sw-border-color: #000;
+
+  /* Modal Colors */
+  --sw-modal-button-color: #000;
+  --sw-modal-button-accent-color: #FFF;
+  --sw-modal-background-color: #E2DAD6;
+}
+
+/* Apply these global styles to your root HTML element or body */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Poppins', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--sw-background-color);
+  color: var(--sw-text-color);
+}

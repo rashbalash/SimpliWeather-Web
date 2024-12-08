@@ -1,8 +1,14 @@
 import React from 'react';
-import './locationNameTag.css'; // Import the CSS file for styling
+import { useSelector } from 'react-redux';
+
+import './locationNameTag.css';
 
 const LocationNameTag = ({ location }) => {
-  return <div className="location-name-tag">{location}</div>;
+  const isUiFilled = useSelector((state) => state.settings.isUiFilled);
+
+  return (
+    <div className={`location-name-tag ${isUiFilled ? 'filled' : 'unfilled'}`}>{location}</div>
+  );
 };
 
 export default LocationNameTag;

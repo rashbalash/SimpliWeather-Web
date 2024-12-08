@@ -1,13 +1,14 @@
 .title {
     font-size: 1.5rem;
-    color: white;
-    margin: .5rem;
+    color: var(--sw-text-color);
+    margin: 0 .5rem;
 }
 
 .header-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin: 1rem;
 }
 
 .header-title-and-location-name {
@@ -16,7 +17,6 @@
 }
 
 .menu-and-alert-buttons {
-    margin: 1rem 0 0 1rem;
     gap: .8rem;
     display: flex;
     flex-direction: column;
