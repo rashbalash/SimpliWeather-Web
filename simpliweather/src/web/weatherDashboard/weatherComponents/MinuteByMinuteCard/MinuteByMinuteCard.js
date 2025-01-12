@@ -19,7 +19,7 @@ const MinuteByMinuteCard = ({ minutelyData }) => {
 
   return (
     <div className={`minute-card ${isUiFilled ? 'filled' : 'unfilled'}`}>
-      <h3>Rain in the Next Hour</h3>
+      <h3>Precipitation in the Next Hour (Intensity)</h3>
       <div className="timeline">
         {minutelyData.map((minute, index) => (
           <div key={minute.dt} className="minute-bar">

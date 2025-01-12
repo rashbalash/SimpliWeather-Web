@@ -11,7 +11,7 @@ const locationsSlice = createSlice({
     },
     removeLocation(state, action) {
       state.locations = state.locations.filter(
-        (location) => location !== action.payload
+        (location) => location.id !== action.payload
       );
     },
     clearLocations(state) {

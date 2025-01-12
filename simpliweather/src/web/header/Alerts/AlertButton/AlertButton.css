@@ -1,3 +1,8 @@
+.alert-button-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
 .alert-button {
     background-color: #ccc;
     border: none;
@@ -17,14 +22,23 @@
 
 .tooltip {
     position: absolute;
-    background-color: var(--sw-background-color);
-    border: .1rem solid var(--sw-border-color);
-    padding: 5px;
+    top: 50%; /* Vertically centered relative to the button */
+    left: 100%; /* Position the tooltip to the right of the button */
+    transform: translateY(-50%); /* Vertically center it */
+    background-color: #D93025; /* Red background */
+    color: white;
+    padding: 8px 16px;
+    border-radius: 24px; /* Rounded corners */
     font-size: 14px;
-    top: 40px;
-    left: 0;
-    z-index: 15;
+    font-weight: 500;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
 }
+
 
 .notification-symbol {
     width: 27px;

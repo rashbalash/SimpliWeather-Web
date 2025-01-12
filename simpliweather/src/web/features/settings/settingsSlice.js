@@ -5,7 +5,8 @@ const settingsSlice = createSlice({
     initialState: {
         isUiFilled: true,
         isDarkMode: true,
-        temperatureScale: 'F',
+        temperatureScale: 'imperial',
+        primaryId: 0,
     },
     reducers: {
         toggleUiFill: (state) => {
@@ -17,8 +18,11 @@ const settingsSlice = createSlice({
         setTemperatureUnit: (state, action) => {
             state.temperatureScale = action.payload;
         },
+        setPrimaryId: (state, action) => {
+            state.primaryId = action.payload;
+        }
     },
 });
 
-export const { toggleUiFill, toggleThemeMode, setTemperatureUnit } = settingsSlice.actions;
+export const { toggleUiFill, toggleThemeMode, setTemperatureUnit, setPrimaryId } = settingsSlice.actions;
 export default settingsSlice.reducer;

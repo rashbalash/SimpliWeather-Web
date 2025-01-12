@@ -38,4 +38,30 @@
     justify-content: space-between;
     margin: 10px 0;
 }
-  
+
+.location-menu-plus-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background-color: #007bff; /* Blue color */
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.location-menu-plus-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.location-menu-plus-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Accessibility focus ring */
+}

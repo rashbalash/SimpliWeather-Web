@@ -7,17 +7,25 @@
 .current-weather-and-details-wrapper {
     display: flex;
     flex-direction: column;
-    min-width: 49%;
+    flex: 1;
 }
 
 .weather-dashboard-minute-hourly-daily {
     display: flex;
     flex-direction: column;
-    min-width: 49%;
+    max-width: 67%;
     margin: 0 0.5rem;
+    flex: 2;
 }
 
 .current-weather-spacer {
     height: 3rem;
     width: 100%;
+}
+
+@media screen and (max-width: 1164px) {
+    .current-weather-and-details-wrapper, .weather-dashboard-minute-hourly-daily {
+      flex: 1 1 100%; /* Each item takes full width */
+      max-width: 95%;
+    }
 }

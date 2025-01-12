@@ -1,0 +1,42 @@
+.location-menu-item {
+    background: #356bb7;
+    border-radius: 12px;
+    padding: 10px;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.location-menu-item:hover {
+    background: #21395c;
+}
+
+.location-menu-weather-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+  
+.location-menu-weather-info {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.location-menu-delete-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    transition: background 0.2s ease;
+}
+
+.location-menu-delete-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}

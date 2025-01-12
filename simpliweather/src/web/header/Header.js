@@ -23,7 +23,7 @@ const Header = () => {
         <div className="header-wrapper">
             <div className="menu-and-alert-buttons">
                 <LocationMenuButton isOpen={isLocationMenuOpen} toggleLocationMenu={toggleLocationMenu} />
-                <LocationMenuModal isOpen={isLocationMenuOpen} />
+                <LocationMenuModal isOpen={isLocationMenuOpen} toggleLocationMenu={toggleLocationMenu} />
 
                 <AlertButton />
             </div>

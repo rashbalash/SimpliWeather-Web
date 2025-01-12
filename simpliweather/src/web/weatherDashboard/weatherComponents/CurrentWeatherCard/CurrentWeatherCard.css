@@ -11,8 +11,6 @@
 .current-weather-icon {
     display: flex;
     position: relative;
-    width: 100px;
-    height: 80px;
 }
 
 .sun {
@@ -66,6 +64,8 @@
 .current-weather-details {
     border-radius: 25px;
     padding: 1rem;
+    min-width: 9rem;
+    min-height: 9rem;
 }
 
 .current-weather-details.filled {

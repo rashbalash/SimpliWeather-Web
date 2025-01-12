@@ -4,18 +4,6 @@ import './AlertModal.css';
 const AlertModal = ({ alerts, isOpen, closeModal }) => {
     if (!isOpen) return null;
 
-    if (alerts.length === 0) {
-        return (
-            <div className="alert-modal">
-                <div className="alert-modal-content">
-                    <h2>No Alerts</h2>
-                    <p>There are no weather alerts in your area at the moment.</p>
-                    <button onClick={closeModal}>Close</button>
-                </div>
-            </div>
-        );
-    }
-
     const handleOverlayClick = (e) => {
         if (e.target.classList.contains("alert-modal")) {
             closeModal();
@@ -25,10 +13,28 @@ const AlertModal = ({ alerts, isOpen, closeModal }) => {
     return (
         <div className="alert-modal" onClick={handleOverlayClick}>
             <div className="alert-modal-content">
-                <h2>{alerts[0].event}</h2>
-                <p>{alerts[0].description}</p>
-                <p><strong>Severity: </strong>{alerts[0].severity}</p>
-                <p><strong>Expires: </strong>{new Date(alerts[0].end * 1000).toLocaleString()}</p> {/* Convert Unix timestamp */}
+                <h2>Weather Alerts</h2>
+                {alerts.length === 0 ? (
+                    <>
+                        <p>No alerts in your area at the moment.</p>
+                    </>
+                ) : (
+                    alerts.map((alert, index) => (
+                        <div key={index} className="alert-item">
+                            <h3>{alert.event}</h3>
+                            <p>{alert.description}</p>
+                            <p>
+                                <strong>Starts: </strong>
+                                {new Date(alert.start * 1000).toLocaleString()}
+                            </p>
+                            <p>
+                                <strong>Expires: </strong>
+                                {new Date(alert.end * 1000).toLocaleString()}
+                            </p>
+                            <hr />
+                        </div>
+                    ))
+                )}
                 <button onClick={closeModal}>Close</button>
             </div>
         </div>

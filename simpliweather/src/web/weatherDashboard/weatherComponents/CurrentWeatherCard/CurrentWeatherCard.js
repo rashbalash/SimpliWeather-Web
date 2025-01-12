@@ -1,16 +1,18 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-
+import WeatherAnimation from '../../../generalComponents/WeatherAnimations/WeatherAnimation';
 import './CurrentWeatherCard.css';
 
-const CurrentWeatherCard = ({ temperature, high, low, realFeel, condition }) => {
+const CURRENT_WEATHER_CARD_ANIMATED_ICON_SCALE = 140;
+
+const CurrentWeatherCard = ({ currentWeatherCardData }) => {
   const isUiFilled = useSelector((state) => state.settings.isUiFilled);
+  const { temperature, high, low, realFeel, condition, weatherAnimationId } = currentWeatherCardData;
 
   return (
     <div className="current-weather-card">
       <div className="current-weather-icon">
-        <div className="sun"></div>
-        <div className="cloud"></div>
+        <WeatherAnimation weatherId={weatherAnimationId} scale={CURRENT_WEATHER_CARD_ANIMATED_ICON_SCALE} />
       </div>
       <div className={`current-weather-details ${isUiFilled ? 'filled' : 'unfilled'}`}>
         <div className="current-weather-temp-box">

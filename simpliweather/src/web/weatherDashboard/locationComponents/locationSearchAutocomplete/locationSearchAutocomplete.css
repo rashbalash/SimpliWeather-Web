@@ -1,0 +1,47 @@
+.location-search-wrapper-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 1rem;
+    margin-right: .5rem;
+    min-width: 17rem;
+}
+
+.autocomplete-dropdown {
+    position: absolute;
+    background-color: var(--sw-modal-background-color);
+    border-radius: 5px;
+    z-index: 10;
+    max-height: 200px;
+    overflow-y: auto;
+    cursor: pointer;
+    border: 0.1rem solid var(--sw-border-color);
+    text-align: left; 
+    min-width: 17rem;
+}
+
+.suggestion-item {
+    margin: 0.2rem;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+.suggestion-item--active {
+    background-color: var(--sw-secondary-fill-color);
+    color: var(--sw-secondary-text-color);
+    margin: 0.2rem;
+}
+
+.search-button {
+    background-color: var(--sw-main-accent-fill-color);
+    border: none;
+    border-radius: 50%;
+    padding: .7rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.search-button:hover {
+    background-color: var(--sw-main-accent-fill-color-darkened);
+}
